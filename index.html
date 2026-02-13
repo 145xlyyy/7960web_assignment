@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FOCUSLY – A Productivity Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <div class="brand-text">
+            <div class="brand-name">FOCUSLY</div>
+            <div class="brand-sub">Productivity Analytics Dashboard</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#dashboard">Dashboard</a>
+          <a href="#insights">Insights</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#reflection">Reflection</a>
+        </nav>
+
+        <a class="nav-cta" href="#pricing">Upgrade</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="chip">Simulated analytics · No personal data</p>
+          <h1>FOCUSLY</h1>
+          <h2>A Productivity Analytics Dashboard</h2>
+
+          <p class="lead">
+            FOCUSLY visualizes productivity patterns with simple metrics and readable charts.
+            It is designed as a concept product: not a tracker, but a clear way to communicate
+            how “focus” can be quantified, compared, and optimized.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#dashboard">View Dashboard</a>
+            <a class="btn primary" href="#pricing">See Pricing</a>
+          </div>
+
+          <div class="mini-metrics">
+            <div class="mini">
+              <div class="mini-label">Weekly Focus Hours</div>
+              <div class="mini-value">18.6</div>
+            </div>
+            <div class="mini">
+              <div class="mini-label">Completion Rate</div>
+              <div class="mini-value">82%</div>
+            </div>
+            <div class="mini">
+              <div class="mini-label">Distraction Events</div>
+              <div class="mini-value">27</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Panel (decorative dashboard preview) -->
+        <div class="hero-right" aria-hidden="true">
+          <div class="preview-card">
+            <div class="preview-head">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="preview-title">Weekly Overview</span>
+            </div>
+
+            <div class="preview-kpis">
+              <div class="preview-kpi">
+                <div class="kpi-name">Efficiency Score</div>
+                <div class="kpi-big">79</div>
+                <div class="kpi-note">+6 vs last week</div>
+              </div>
+              <div class="preview-kpi">
+                <div class="kpi-name">Deep Work Ratio</div>
+                <div class="kpi-big">46%</div>
+                <div class="kpi-note">stable</div>
+              </div>
+            </div>
+
+            <div class="preview-bars">
+              <div class="bar-row">
+                <span>Mon</span>
+                <div class="bar"><i style="width: 62%"></i></div>
+                <span>3.1h</span>
+              </div>
+              <div class="bar-row">
+                <span>Tue</span>
+                <div class="bar"><i style="width: 78%"></i></div>
+                <span>3.9h</span>
+              </div>
+              <div class="bar-row">
+                <span>Wed</span>
+                <div class="bar"><i style="width: 55%"></i></div>
+                <span>2.8h</span>
+              </div>
+              <div class="bar-row">
+                <span>Thu</span>
+                <div class="bar"><i style="width: 88%"></i></div>
+                <span>4.4h</span>
+              </div>
+              <div class="bar-row">
+                <span>Fri</span>
+                <div class="bar"><i style="width: 70%"></i></div>
+                <span>3.5h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h3>Dashboard</h3>
+          <p>
+            A clean snapshot of focus patterns, task outcomes, and disruption signals.
+            All values below are simulated to demonstrate data storytelling and dashboard layout.
+          </p>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+          <article class="card kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-title">Weekly Focus Hours</span>
+              <span class="tag up">+8%</span>
+            </div>
+            <div class="kpi-main">18.6</div>
+            <div class="kpi-sub">Avg session: 42 mins</div>
+          </article>
+
+          <article class="card kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-title">Task Completion Rate</span>
+              <span class="tag up">+5%</span>
+            </div>
+            <div class="kpi-main">82%</div>
+            <div class="kpi-sub">Completed: 23 / Planned: 28</div>
+          </article>
+
+          <article class="card kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-title">Distraction Events</span>
+              <span class="tag down">-3</span>
+            </div>
+            <div class="kpi-main">27</div>
+            <div class="kpi-sub">Main source: social notifications</div>
+          </article>
+
+          <article class="card kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-title">Efficiency Score</span>
+              <span class="tag up">+6</span>
+            </div>
+            <div class="kpi-main">79</div>
+            <div class="kpi-sub">Based on focus, completion & stability</div>
+          </article>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="chart-grid">
+          <!-- Time-of-day -->
+          <article class="card">
+            <div class="card-head">
+              <h4>Focus by Time of Day</h4>
+              <span class="muted">hours (weekly)</span>
+            </div>
+
+            <div class="hbars">
+              <div class="hrow">
+                <div class="hlabel">Morning (8–12)</div>
+                <div class="hbar"><span style="width: 78%"></span></div>
+                <div class="hval">7.2h</div>
+              </div>
+              <div class="hrow">
+                <div class="hlabel">Afternoon (12–18)</div>
+                <div class="hbar"><span style="width: 54%"></span></div>
+                <div class="hval">5.0h</div>
+              </div>
+              <div class="hrow">
+                <div class="hlabel">Evening (18–24)</div>
+                <div class="hbar"><span style="width: 43%"></span></div>
+                <div class="hval">4.0h</div>
+              </div>
+              <div class="hrow">
+                <div class="hlabel">Late night (24–2)</div>
+                <div class="hbar"><span style="width: 26%"></span></div>
+                <div class="hval">2.4h</div>
+              </div>
+            </div>
+
+            <div class="note">
+              Peak focus appears in the morning window, with a visible drop after mid-afternoon.
+            </div>
+          </article>
+
+          <!-- Task type -->
+          <article class="card">
+            <div class="card-head">
+              <h4>Task Type Breakdown</h4>
+              <span class="muted">share of time</span>
+            </div>
+
+            <div class="stack">
+              <div class="stack-bar" aria-label="Task share stacked bar">
+                <div class="seg s1" style="width: 46%"></div>
+                <div class="seg s2" style="width: 24%"></div>
+                <div class="seg s3" style="width: 18%"></div>
+                <div class="seg s4" style="width: 12%"></div>
+              </div>
+
+              <ul class="legend">
+                <li><span class="sw s1"></span>Deep Work — 46%</li>
+                <li><span class="sw s2"></span>Admin — 24%</li>
+                <li><span class="sw s3"></span>Meetings — 18%</li>
+                <li><span class="sw s4"></span>Context Switching — 12%</li>
+              </ul>
+            </div>
+
+            <div class="note">
+              The largest share is deep work, but context switching still takes a measurable portion.
+            </div>
+          </article>
+
+          <!-- Trend -->
+          <article class="card">
+            <div class="card-head">
+              <h4>Efficiency Trend</h4>
+              <span class="muted">weekly score</span>
+            </div>
+
+            <div class="vchart">
+              <div class="vcol">
+                <div class="vbar" style="height: 58%"></div>
+                <div class="vlabel">W1</div>
+                <div class="vval">72</div>
+              </div>
+              <div class="vcol">
+                <div class="vbar" style="height: 64%"></div>
+                <div class="vlabel">W2</div>
+                <div class="vval">78</div>
+              </div>
+              <div class="vcol">
+                <div class="vbar" style="height: 56%"></div>
+                <div class="vlabel">W3</div>
+                <div class="vval">69</div>
+              </div>
+              <div class="vcol">
+                <div class="vbar" style="height: 72%"></div>
+                <div class="vlabel">W4</div>
+                <div class="vval">81</div>
+              </div>
+            </div>
+
+            <div class="note">
+              Trend suggests improvement after week 3, consistent with fewer distractions and higher completion.
+            </div>
+          </article>
+
+          <!-- Table -->
+          <article class="card">
+            <div class="card-head">
+              <h4>Weekly Summary</h4>
+              <span class="muted">key indicators</span>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <tr>
+                  <th>Metric</th>
+                  <th>This Week</th>
+                  <th>Last Week</th>
+                  <th>Change</th>
+                </tr>
+                <tr>
+                  <td>Focus Hours</td>
+                  <td>18.6</td>
+                  <td>17.2</td>
+                  <td class="pos">+1.4</td>
+                </tr>
+                <tr>
+                  <td>Completion Rate</td>
+                  <td>82%</td>
+                  <td>77%</td>
+                  <td class="pos">+5%</td>
+                </tr>
+                <tr>
+                  <td>Distraction Events</td>
+                  <td>27</td>
+                  <td>30</td>
+                  <td class="pos">-3</td>
+                </tr>
+                <tr>
+                  <td>Efficiency Score</td>
+                  <td>79</td>
+                  <td>73</td>
+                  <td class="pos">+6</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="note">
+              Summary provides a quick comparison view for weekly performance and stability.
+            </div>
+          </article>
+        </div>
+
+        <!-- UI Snapshots -->
+        <div class="gallery-wrap">
+          <div class="gallery-head">
+            <h4>UI Snapshots</h4>
+          </div>
+
+          <div class="gallery">
+            <figure class="shot">
+              <img src="images/snapshot1.jpg" alt="Dashboard analytics overview" />
+              <figcaption>Focus sessions</figcaption>
+            </figure>
+
+            <figure class="shot">
+              <img src="images/snapshot2.jpg" alt="Weekly calendar rhythm" />
+              <figcaption>Weekly rhythm</figcaption>
+            </figure>
+
+            <figure class="shot">
+              <img src="images/snapshot3.jpg" alt="Notification distraction signals" />
+              <figcaption>Distraction signals</figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section id="insights" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h3>Insights</h3>
+          <p>A simple interpretation layer: turning dashboard signals into actionable observations.</p>
+        </div>
+
+        <div class="insight-grid">
+          <article class="card insight">
+            <h4>Peak window</h4>
+            <p>
+              Highest focus density appears between <strong>9:00–11:00</strong>, suggesting an ideal deep-work slot.
+            </p>
+            <p class="muted">Recommendation: schedule the hardest tasks here.</p>
+          </article>
+
+          <article class="card insight">
+            <h4>Afternoon drift</h4>
+            <p>Distractions rise after <strong>3:00 PM</strong> while completion slows.</p>
+            <p class="muted">Recommendation: use shorter sprints + planned breaks.</p>
+          </article>
+
+          <article class="card insight">
+            <h4>Context switching cost</h4>
+            <p>Even a <strong>12%</strong> switching share can lower perceived efficiency.</p>
+            <p class="muted">Recommendation: batch admin tasks into a single block.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h3>Pricing</h3>
+          <p>A realistic monetization model for a productivity analytics product.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="card plan">
+            <div class="plan-head">
+              <h4>Free</h4>
+              <div class="plan-price">$0</div>
+            </div>
+            <ul class="plan-list">
+              <li>Weekly snapshot dashboard</li>
+              <li>Basic time-of-day chart</li>
+              <li>Summary table</li>
+            </ul>
+            <a class="btn ghost full" href="#dashboard">Use Free</a>
+          </article>
+
+          <article class="card plan featured">
+            <div class="plan-head">
+              <h4>Pro</h4>
+              <div class="plan-price">$6.99 <span>/ month</span></div>
+            </div>
+            <ul class="plan-list">
+              <li>Trend analysis + comparisons</li>
+              <li>Goal tracking & weekly targets</li>
+              <li>Focus sessions breakdown</li>
+            </ul>
+            <a class="btn primary full" href="#pricing">Upgrade to Pro</a>
+          </article>
+
+          <article class="card plan">
+            <div class="plan-head">
+              <h4>Team</h4>
+              <div class="plan-price">$18.99 <span>/ month</span></div>
+            </div>
+            <ul class="plan-list">
+              <li>Up to 4 team members included</li>
+              <li>Shared team dashboard + role metrics</li>
+              <li>Monthly reporting export (PDF/CSV concept)</li>
+            </ul>
+            <a class="btn ghost full" href="#pricing">Contact Sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflection -->
+    <section id="reflection" class="section">
+      <div class="container">
+        <details class="refl">
+          <summary class="refl-btn">Read Reflection</summary>
+          <div class="card reflection refl-panel">
+            <p>
+              Building this dashboard made me think about how easily “a productive day” can be reduced to numbers. Metrics
+              like focus hours, completion rate, and efficiency score are useful for comparison, but they also simplify
+              complex experiences into clean signals that platforms can rank and optimize. FOCUSLY is designed to show how
+              dashboard logic can shape what we notice, what we value, and what we try to improve.
+            </p>
+          </div>
+        </details>
+
+        <footer class="footer">
+            
+          <p>COMM7960 AI for Interactive Media Design - Web Assignment</p>
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>
